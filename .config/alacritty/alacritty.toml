@@ -1,0 +1,27 @@
+import = ["./themes/tokyo-night.toml"]
+
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "On"
+shape = "Underline"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "JetBrainsMonoNL NF"
+style = "Regular"
+
+[font.bold_italic]
+family = "JetBrainsMonoNL NF"
+style = "Regular Italic"
+
+[font.italic]
+family = "JetBrainsMonoNL NF"
+style = "Light Italic"
+
+[font.normal]
+family = "JetbrainsMono Nerd Font"
+style = "Light"
