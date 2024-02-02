@@ -22,8 +22,8 @@ return {
 					["<C-p>"] = "actions.preview",
 					["<C-c>"] = "actions.close",
 					["<C-r>"] = "actions.refresh",
-					["-"] = "actions.parent",
-					["_"] = "actions.open_cwd",
+					["-"] = "actions.parent", -- open parent directory
+					["_"] = "actions.open_cwd", -- go back to the working directory
 					["`"] = "actions.cd",
 					["~"] = "actions.tcd",
 					["gs"] = "actions.change_sort",

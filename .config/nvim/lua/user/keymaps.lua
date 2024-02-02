@@ -5,8 +5,8 @@ local nnoremap = require("user.keymap_utils").nnoremap
 -- local xnoremap = require("user.keymap_utils").xnoremap
 
 -- Normal --
+
 -- Disable Space bar since it'll be used as the leader key
---
 nnoremap("<space>", "<nop>")
 
 
