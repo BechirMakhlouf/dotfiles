@@ -30,7 +30,6 @@ return {
 				ui = {
 					border = "rounded",
 				},
-        ens
 			})
 
 			-- Configure mason to auto install servers
