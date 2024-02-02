@@ -23,6 +23,12 @@ tnoremap("<C-j>", [[<Cmd>wincmd j<CR>]])
 tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]])
 tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]])
 
+-- tmux navigation
+nnoremap("<C-h>", [[<Cmd>NvimTmuxNavigateLeft<CR>]])
+nnoremap("<C-j>", [[<Cmd>NvimTmuxNavigateDown<CR>]])
+nnoremap("<C-k>", [[<Cmd>NvimTmuxNavigateUp<CR>]])
+nnoremap("<C-l>", [[<Cmd>NvimTmuxNavigateRight<CR>]])
+
 -- Center buffer while navigating
 nnoremap("<C-u>", "<C-u>zz")
 nnoremap("<C-d>", "<C-d>zz")
