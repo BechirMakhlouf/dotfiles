@@ -1,0 +1,44 @@
+---
+Bars launched...
+polybar|notice:  Parsing config file: /home/copernicus/.config/polybar/config.ini
+polybar|notice:  Listening for IPC messages (PID: 25131)
+polybar|error: Invalid value for "bar/mybar.separator-foreground", using default value (reason: The reference ${colors.disabled} does not exist (no fallback set))
+polybar|error: Invalid value for "bar/mybar.border-color", using default value (reason: The reference ${color.background} does not exist (no fallback set))
+polybar|notice:  Loading module 'xworkspaces' of type 'internal/xworkspaces'
+polybar|error: Invalid value for "module/xworkspaces.label-active-background", using default value (reason: The reference ${colors.background-alt} does not exist (no fallback set))
+polybar|error: Invalid value for "module/xworkspaces.label-urgent-background", using default value (reason: The reference ${colors.alert} does not exist (no fallback set))
+polybar|error: Invalid value for "module/xworkspaces.label-empty-foreground", using default value (reason: The reference ${colors.disabled} does not exist (no fallback set))
+polybar|error: Disabling module "xwindow" (reason: Missing section "module/xwindow")
+polybar|notice:  Loading module 'filesystem' of type 'internal/fs'
+polybar|error: Invalid value for "module/filesystem.label-unmounted-foreground", using default value (reason: The reference ${colors.disabled} does not exist (no fallback set))
+polybar|notice:  Loading module 'pulseaudio' of type 'internal/pulseaudio'
+polybar|notice:  pulseaudio: using default sink alsa_output.usb-0c76_USB_PnP_Audio_Device-00.analog-stereo
+polybar|error: Invalid value for "module/pulseaudio.label-muted-foreground", using default value (reason: The reference ${colors.disabled} does not exist (no fallback set))
+polybar|notice:  Loading module 'xkeyboard' of type 'internal/xkeyboard'
+polybar|error: Invalid value for "module/xkeyboard.label-indicator-background", using default value (reason: The reference ${colors.secondary} does not exist (no fallback set))
+polybar|notice:  Loading module 'memory' of type 'internal/memory'
+polybar|notice:  Loading module 'backlight' of type 'internal/backlight'
+polybar|notice:  Loading module 'nmlauncher' of type 'custom/text'
+polybar|notice:  Loading module 'date' of type 'internal/date'
+polybar|error: Invalid value for "module/date.label-foreground", using default value (reason: The reference ${colors.secondary} does not exist (no fallback set))
+polybar|notice:  Loading module 'battery' of type 'internal/battery'
+polybar|notice:  Loading module 'wirelessnetwork' of type 'internal/network'
+polybar|error: Disabling module "wirelessnetwork" (reason: Invalid network interface "%{F#F0C674}%ifname%%{F-}")
+polybar|notice:  Loaded 9 modules
+polybar|notice:  Loaded font "Iosevka Nerd Font:pixelsize=14" (name=Iosevka Nerd Font, offset=0, file=/usr/share/fonts/TTF/IosevkaNerdFont-Regular.ttf)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|error: module/backlight: Unable to change backlight value. Your system may require additional configuration. Please read the module documentation.
+(reason: failed to write to /sys/class/backlight/amdgpu_bl0/brightness: Permission denied)
+polybar|notice:  Received signal(15): Terminated
+polybar|notice:  Termination signal received, shutting down...
