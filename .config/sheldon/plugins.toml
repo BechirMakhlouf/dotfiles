@@ -1,0 +1,38 @@
+shell = "zsh"
+#
+[plugins]
+#
+[plugins.powerlevel10k]
+github = "romkatv/powerlevel10k"
+#
+[plugins.zsh-autosuggestions]
+github = 'zsh-users/zsh-autosuggestions'
+#
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+#
+[plugins.zsh-autocomplete]
+github = "marlonrichert/zsh-autocomplete"
+#
+[plugins.zsh-autopair]
+github = "hlissner/zsh-autopair"
+#
+[plugins.enhancd]
+github = "babarot/enhancd"
+# github = "b4b4r07/enhancd"
+
+#
+# [plugins.zsh-completions]
+# github = "zsh-users/zsh-completions"
+#
+# [plugins.zsh-history-substring-search]
+# github = "zsh-users/zsh-history-substring-search"
+#
+# [plugins.git]
+# github = "davidde/git"
+#
+# [plugins.base16]
+# github = 'chriskempson/base16-shell'
+#
+# [plugins.zsh-vi-mode]
+# github = 'jeffreytse/zsh-vi-mode'
