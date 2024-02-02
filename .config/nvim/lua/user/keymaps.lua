@@ -17,6 +17,12 @@ local TERM = os.getenv("TERM")
 -- Disable Space bar since it'll be used as the leader key
 nnoremap("<space>", "<nop>")
 
+-- Window navigation from terminal
+tnoremap("<C-h>", [[<Cmd>wincmd h<CR>]])
+tnoremap("<C-j>", [[<Cmd>wincmd j<CR>]])
+tnoremap("<C-k>", [[<Cmd>wincmd k<CR>]])
+tnoremap("<C-l>", [[<Cmd>wincmd l<CR>]])
+
 -- Center buffer while navigating
 nnoremap("<C-u>", "<C-u>zz")
 nnoremap("<C-d>", "<C-d>zz")
@@ -157,8 +163,10 @@ nnoremap("<leader>5", function()
 	harpoon_ui.nav_file(5)
 end)
 
-local M = {}
+
 -- LSP Keybinds (exports a function to be used in ../../after/plugin/lsp.lua b/c we need a reference to the current buffer) --
+local M = {}
+
 M.map_lsp_keybinds = function(buffer_number)
 	nnoremap("<leader>rn", vim.lsp.buf.rename, { desc = "LSP: [R]e[n]ame", buffer = buffer_number })
 	nnoremap("<leader>ca", vim.lsp.buf.code_action, { desc = "LSP: [C]ode [A]ction", buffer = buffer_number })
