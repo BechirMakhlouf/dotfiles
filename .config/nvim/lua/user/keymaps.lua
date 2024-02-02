@@ -4,6 +4,8 @@ local inoremap = require("user.keymap_utils").inoremap
 local tnoremap = require("user.keymap_utils").tnoremap
 local xnoremap = require("user.keymap_utils").xnoremap
 
+local illuminate = require("illuminate")
+
 local TERM = os.getenv("TERM")
 
 
@@ -99,6 +101,17 @@ nnoremap("<leader>ss", function()
 		previewer = false,
 	}))
 end, { desc = "[S]earch [S]pelling suggestions" })
+
+-- Vim Illuminate keybinds
+nnoremap("<leader>]", function()
+	illuminate.goto_next_reference()
+	vim.api.nvim_feedkeys("zz", "n", false)
+end, { desc = "Illuminate: Goto next reference" })
+
+nnoremap("<leader>[", function()
+	illuminate.goto_prev_reference()
+	vim.api.nvim_feedkeys("zz", "n", false)
+end, { desc = "Illuminate: Goto previous reference" })
 
 
 local M = {}

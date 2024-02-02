@@ -30,6 +30,7 @@ return {
 				ui = {
 					border = "rounded",
 				},
+        ens
 			})
 
 			-- Configure mason to auto install servers
@@ -73,7 +74,7 @@ return {
 				-- clangd = {},
 				cssls = {},
 				-- gleam = {},
-				graphql = {},
+				-- graphql = {},
 				html = {},
 				jsonls = {},
 				lua_ls = {
@@ -86,6 +87,7 @@ return {
 				},
 				-- marksman = {},
 				-- nil_ls = {},
+        -- eslint_d = {},
 				-- ocamllsp = {},
 				-- prismals = {},
 				-- pyright = {},
