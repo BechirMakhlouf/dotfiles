@@ -7,6 +7,7 @@ local xnoremap = require("user.keymap_utils").xnoremap
 local illuminate = require("illuminate")
 local harpoon_ui = require("harpoon.ui")
 local harpoon_mark = require("harpoon.mark")
+local utils = require("user.utils")
 
 local TERM = os.getenv("TERM")
 
@@ -170,6 +171,28 @@ nnoremap("<leader>5", function()
 end)
 
 
+-- Git Keybinds
+nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")
+nnoremap("<leader>gf", function()
+	local cmd = {
+		"sort",
+		"-u",
+		"<(git diff --name-only --cached)",
+		"<(git diff --name-only)",
+		"<(git diff --name-only --diff-filter=U)",
+	}
+
+	if not utils.is_git_directory() then
+		vim.notify(
+			"Current project is not a git directory",
+			vim.log.levels.WARN,
+			{ title = "Telescope Git Files", git_command = cmd }
+		)
+	else
+		require("telescope.builtin").git_files()
+	end
+end, { desc = "Search [G]it [F]iles" })
+--
 -- LSP Keybinds (exports a function to be used in ../../after/plugin/lsp.lua b/c we need a reference to the current buffer) --
 local M = {}
 
