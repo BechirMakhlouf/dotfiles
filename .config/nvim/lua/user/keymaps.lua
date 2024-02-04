@@ -117,6 +117,10 @@ nnoremap("<leader>ss", function()
 	}))
 end, { desc = "[S]earch [S]pelling suggestions" })
 
+-- nnoremap("<leader>st", function()
+-- 		require("telescope
+-- end, { desc = "[S]earch [T]elescope builtins" })
+
 -- Vim Illuminate keybinds
 nnoremap("<leader>]", function()
 	illuminate.goto_next_reference()
