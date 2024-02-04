@@ -15,6 +15,8 @@ return {
 				ensure_installed = {
 					"bash",
 					"c",
+          "go",
+          "python",
 					"css",
 					-- "gleam",
 					-- "graphql",

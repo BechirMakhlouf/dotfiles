@@ -13,6 +13,9 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("oil").setup({
+        columns = {
+          "icon",
+        },
 				keymaps = {
 					["g?"] = "actions.show_help",
 					["<CR>"] = "actions.select",
@@ -30,6 +33,9 @@ return {
 					["gx"] = "actions.open_external",
 					["g."] = "actions.toggle_hidden",
 				},
+        view_options = {
+          show_hidden = true,
+        },
 				use_default_keymaps = false,
 			})
 		end,

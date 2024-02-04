@@ -84,9 +84,29 @@ return {
 						},
 					},
 				},
+				gopls = {
+					-- capabilities = default_capabilities,
+					-- filetypes = config.filetypes,
+					-- handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {}),
+					-- on_attach = on_attach,
+					-- settings = config.settings,
+					filetypes = {
+						"go",
+						"gomod",
+						"gowork",
+						"gotmpl",
+					},
+					root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+          settings = {
+            gopls = {
+              completeUnimported = true,
+              usePlaceholders = true,
+            }
+          }
+				},
 				-- marksman = {},
 				-- nil_ls = {},
-        -- eslint_d = {},
+				-- eslint_d = {},
 				-- ocamllsp = {},
 				-- prismals = {},
 				-- pyright = {},
@@ -154,6 +174,7 @@ return {
 					handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {}),
 					on_attach = on_attach,
 					settings = config.settings,
+					root_dir = config.root_dir,
 				})
 			end
 
@@ -169,7 +190,6 @@ return {
 					formatting.prettierd,
 					formatting.stylua,
 					formatting.ocamlformat,
-
 					-- diagnostics
 					diagnostics.eslint_d.with({
 						condition = function(utils)
