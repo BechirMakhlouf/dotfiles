@@ -41,6 +41,8 @@ return {
 					"html",
 					"jsonls",
 					"lua_ls",
+					"clangd",
+					"clang-format",
 					"gopls",
 				},
 			})
@@ -78,7 +80,7 @@ return {
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
 				bashls = {},
-				-- clangd = {},
+				clangd = {},
 				cssls = {},
 				-- gleam = {},
 				-- graphql = {},
@@ -118,6 +120,7 @@ return {
 				-- marksman = {},
 				-- nil_ls = {},
 				-- eslint_d = {},
+				eslint = {},
 				-- ocamllsp = {},
 				prismals = {},
 				pyright = {},
@@ -204,16 +207,17 @@ return {
 					formatting.gofumpt,
 					formatting.goimports_reviser,
 					formatting.golines,
+					formatting.clang_format,
 
 					-- diagnostics for js/ts
-					diagnostics.eslint_d.with({
+					diagnostics.eslint.with({
 						condition = function(utils)
 							return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
 						end,
 					}),
 
 					-- code actions for js/ts
-					code_actions.eslint_d.with({
+					code_actions.eslint.with({
 						condition = function(utils)
 							return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
 						end,
