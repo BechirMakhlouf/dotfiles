@@ -117,7 +117,7 @@ return {
 				},
 				-- marksman = {},
 				-- nil_ls = {},
-				eslint_d = {},
+				-- eslint_d = {},
 				-- ocamllsp = {},
 				prismals = {},
 				pyright = {},
@@ -204,14 +204,15 @@ return {
 					formatting.gofumpt,
 					formatting.goimports_reviser,
 					formatting.golines,
-					-- diagnostics
+
+					-- diagnostics for js/ts
 					diagnostics.eslint_d.with({
 						condition = function(utils)
 							return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
 						end,
 					}),
 
-					-- code actions
+					-- code actions for js/ts
 					code_actions.eslint_d.with({
 						condition = function(utils)
 							return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
