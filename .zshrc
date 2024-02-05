@@ -57,10 +57,10 @@ alias gensecret="node -e \"console.log(require('crypto').randomBytes(32).toStrin
 
 alias fk="fuck"
 
-alias npm="pnpm"
-alias npx="pnpx"
-alias npmm="/usr/bin/npm"
-alias npxx="/usr/bin/npx"
+# alias npm="pnpm"
+# alias npx="pnpx"
+# alias npmm="/usr/bin/npm"
+# alias npxx="/usr/bin/npx"
 
 
 alias next-npm="/usr/bin/npx create-next-app@latest . --eslint --app --typescript --tailwind --no-src-dir --import-alias @"

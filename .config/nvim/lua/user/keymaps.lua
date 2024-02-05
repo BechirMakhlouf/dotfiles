@@ -107,6 +107,7 @@ end, { desc = "[S]earch [F]iles" })
 nnoremap("<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 nnoremap("<leader>sg", require("telescope.builtin").live_grep, { desc = "[S]earch by [G]rep" })
 
+nnoremap("<leader>th", require("telescope.builtin").colorscheme, { desc = "[?] Find recently opened files" })
 nnoremap("<leader>sc", function()
 	require("telescope.builtin").commands(require("telescope.themes").get_dropdown({
 		previewer = false,
