@@ -35,6 +35,14 @@ return {
 			-- Configure mason to auto install servers
 			require("mason-lspconfig").setup({
 				automatic_installation = { exclude = { "ocamllsp", "gleam" } },
+				ensure_installed = {
+					"bashls",
+					"cssls",
+					"html",
+					"jsonls",
+					"lua_ls",
+					"gopls",
+				},
 			})
 
 			-- Override tsserver diagnostics to filter out specific messages
@@ -97,21 +105,24 @@ return {
 						"gotmpl",
 					},
 					root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
-          settings = {
-            gopls = {
-              completeUnimported = true,
-              usePlaceholders = true,
-            }
-          }
+					settings = {
+						gopls = {
+							completeUnimported = true,
+							usePlaceholders = true,
+							analyses = {
+								unusedparams = true,
+							},
+						},
+					},
 				},
 				-- marksman = {},
 				-- nil_ls = {},
-				-- eslint_d = {},
+				eslint_d = {},
 				-- ocamllsp = {},
-				-- prismals = {},
-				-- pyright = {},
+				prismals = {},
+				pyright = {},
 				-- solidity = {},
-				-- sqlls = {},
+				sqlls = {},
 				tailwindcss = {
 					-- filetypes = { "reason" },
 				},
@@ -190,6 +201,9 @@ return {
 					formatting.prettierd,
 					formatting.stylua,
 					formatting.ocamlformat,
+					formatting.gofumpt,
+					formatting.goimports_reviser,
+					formatting.golines,
 					-- diagnostics
 					diagnostics.eslint_d.with({
 						condition = function(utils)
