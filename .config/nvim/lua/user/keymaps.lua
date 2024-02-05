@@ -11,8 +11,6 @@ local utils = require("user.utils")
 
 local TERM = os.getenv("TERM")
 
-
-
 -- Normal --
 
 -- Disable Space bar since it'll be used as the leader key
@@ -83,6 +81,10 @@ nnoremap("[w", function()
 	vim.api.nvim_feedkeys("zz", "n", false)
 end)
 
+-- Lazygit keybinds
+nnoremap("<leader>lg", function()
+	require("lazygit").lazygit()
+end, { desc = "Open [L]azy[G]it" })
 
 -- Oil keybind
 nnoremap("<leader>e", function()
@@ -120,7 +122,6 @@ end, { desc = "[S]earch [S]pelling suggestions" })
 -- nnoremap("<leader>st", function()
 -- 		require("telescope
 -- end, { desc = "[S]earch [T]elescope builtins" })
-
 
 -- Vim Illuminate keybinds
 nnoremap("<leader>]", function()
@@ -174,7 +175,6 @@ end)
 nnoremap("<leader>5", function()
 	harpoon_ui.nav_file(5)
 end)
-
 
 -- Git Keybinds
 nnoremap("<leader>gb", ":Gitsigns toggle_current_line_blame<cr>")
@@ -254,7 +254,6 @@ M.map_lsp_keybinds = function(buffer_number)
 		{ desc = "LSP: [P]roject [S]ymbols", buffer = buffer_number }
 	)
 
-
 	-- See `:help K` for why this keymap
 	nnoremap("K", vim.lsp.buf.hover, { desc = "LSP: Hover Documentation", buffer = buffer_number })
 	nnoremap("<leader>k", vim.lsp.buf.signature_help, { desc = "LSP: Signature Documentation", buffer = buffer_number })
@@ -263,7 +262,6 @@ M.map_lsp_keybinds = function(buffer_number)
 	-- Lesser used LSP functionality
 	nnoremap("gD", vim.lsp.buf.declaration, { desc = "LSP: [G]oto [D]eclaration", buffer = buffer_number })
 	nnoremap("td", vim.lsp.buf.type_definition, { desc = "LSP: [T]ype [D]efinition", buffer = buffer_number })
-
 end
 
 return M
