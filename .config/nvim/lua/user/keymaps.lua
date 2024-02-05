@@ -86,6 +86,12 @@ nnoremap("<leader>lg", function()
 	require("lazygit").lazygit()
 end, { desc = "Open [L]azy[G]it" })
 
+-- Toggleterm keybinds
+
+nnoremap("<A-t>", function ()
+  require("toggleterm").toggle(1)
+end)
+
 -- Oil keybind
 nnoremap("<leader>e", function()
 	require("oil").toggle_float()
