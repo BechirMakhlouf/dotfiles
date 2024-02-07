@@ -40,7 +40,7 @@ alias ll="exa -lahF --icons --group-directories-first"
 alias lt="exa -ahF --icons --group-directories-first --tree --level 2 --ignore-glob='$FILES_TO_IGNORE_GLOB'"
 
 # alias cd="z"
-alias f="ranger"
+alias f="yazi"
 alias cat="bat"
 alias neofetch="fastfetch"
 
