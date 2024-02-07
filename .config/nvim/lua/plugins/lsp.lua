@@ -42,8 +42,10 @@ return {
 					"jsonls",
 					"lua_ls",
 					"clangd",
-					"clang-format",
+					-- "clang-format",
 					"gopls",
+					"intelephense",
+          "taplo"
 				},
 			})
 
@@ -80,7 +82,12 @@ return {
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
 				bashls = {},
-				clangd = {},
+				clangd = {
+					cmd = {
+						"clangd",
+						"--offset-encoding=utf-16",
+					},
+				},
 				cssls = {},
 				-- gleam = {},
 				-- graphql = {},
@@ -142,7 +149,9 @@ return {
 						),
 					},
 				},
-				-- yamlls = {},
+				yamlls = {},
+				intelephense = {},
+        taplo = {}
 			}
 
 			-- Default handlers for LSP
@@ -189,6 +198,7 @@ return {
 					on_attach = on_attach,
 					settings = config.settings,
 					root_dir = config.root_dir,
+          cmd = config.cmd,
 				})
 			end
 
@@ -207,7 +217,7 @@ return {
 					formatting.gofumpt,
 					formatting.goimports_reviser,
 					formatting.golines,
-					formatting.clang_format,
+					-- formatting.clang_format,
 
 					-- diagnostics for js/ts
 					diagnostics.eslint.with({
