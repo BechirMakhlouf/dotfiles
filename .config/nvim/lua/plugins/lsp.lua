@@ -81,6 +81,9 @@ return {
 
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
+        jdtls = {
+          cmd = { "/usr/bin/jdtls"}
+        },
 				bashls = {},
 				clangd = {
 					cmd = {
