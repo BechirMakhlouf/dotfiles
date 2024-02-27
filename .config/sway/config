@@ -323,7 +323,7 @@ assign [class="Alacritty"] $ws10
 exec --no-startup-id swaymsg 'workspace 1; exec /usr/bin/kitty'
 exec --no-startup-id swaymsg 'workspace 2; exec /usr/bin/firefox'
 exec --no-startup-id swaymsg 'workspace 3; exec /usr/bin/kitty'
-exec --no-startup-id swaymsg 'workspace 4; exec /usr/bin/obsidian'
+exec --no-startup-id swaymsg 'workspace 4; exec flatpack run md.obsidian.obsidian'
 exec --no-startup-id swaymsg 'workspace 7; exec /usr/bin/chromium'
 exec --no-startup-id swaymsg 'workspace 9; exec /usr/bin/discord'
 exec --no-startup-id swaymsg 'workspace 10; exec /usr/bin/kitty btop'
