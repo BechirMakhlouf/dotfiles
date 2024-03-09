@@ -162,17 +162,17 @@ return {
 				taplo = {},
 				dockerls = {},
         lemminx = {},
-        rust_analyzer = {
-          filetypes = {"rust"},
-          root_dir = util.root_pattern("Cargo.toml"),
-          settings = {
-            ['cargo-analyzer'] = {
-              cargo = {
-                allFeatures = true,
-              }
-            }
-          }
-        },
+        -- rust_analyzer = {
+        --   filetypes = {"rust"},
+        --   root_dir = util.root_pattern("Cargo.toml"),
+        --   settings = {
+        --     ['cargo-analyzer'] = {
+        --       cargo = {
+        --         allFeatures = true,
+        --       }
+        --     }
+        --   }
+        -- },
 				-- twig_cs = {}
 			}
 
