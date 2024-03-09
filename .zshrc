@@ -23,7 +23,6 @@ export FZF_DEFAULT_COMMAND='fd --hidden --exclude "node_modules|.git|.next|.gith
 # zplug "themes/bira", from:oh-my-zsh, as:theme
 #
 # zplug load
-
 alias szsh="source ~/.zshrc"
 alias zshconfig="nvim ~/.zshrc"
 
@@ -55,9 +54,7 @@ alias gitd="git diff"
 
 alias gensecret="node -e \"console.log(require('crypto').randomBytes(32).toString('hex'))\""
 
-alias fk="fuck"
-
-# alias npm="pnpm"
+alias fk="fuck" # alias npm="pnpm"
 # alias npx="pnpx"
 # alias npmm="/usr/bin/npm"
 # alias npxx="/usr/bin/npx"
@@ -78,11 +75,16 @@ alias weather="weather-Cli get"
 # lunar vim
 alias lvim="/home/copernicus/.local/bin/lvim"
 
+# todoist
+alias todo="todoist-cli"
 # ATUIN
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
 
 bindkey '^r' _atuin_search_widget
+
+# maven stuff
+# mvn-java-simple="mvn archetype:generate -DgroupId=com.example -DartifactId=tp-1 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false"
 
 # depends on terminal mode
 bindkey '^[[A' _atuin_search_widget
@@ -96,3 +98,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export ENHANCD_FILTER="fzf --height 40%:fzy"
+eval "$(zoxide init zsh)"

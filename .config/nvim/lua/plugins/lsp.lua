@@ -1,3 +1,5 @@
+local util = require "lspconfig.util"
+
 return {
 	{
 		"neovim/nvim-lspconfig",
@@ -44,8 +46,11 @@ return {
 					"clangd",
 					-- "clang-format",
 					"gopls",
-					"intelephense",
-          "taplo"
+					"phpactor",
+					"taplo",
+					"dockerls",
+					"lemminx",
+          "rust_analyzer"
 				},
 			})
 
@@ -81,9 +86,9 @@ return {
 
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
-        jdtls = {
-          cmd = { "/usr/bin/jdtls"}
-        },
+				jdtls = {
+					cmd = { "/usr/bin/jdtls" },
+				},
 				bashls = {},
 				clangd = {
 					cmd = {
@@ -153,8 +158,22 @@ return {
 					},
 				},
 				yamlls = {},
-				intelephense = {},
-        taplo = {}
+				phpactor = {},
+				taplo = {},
+				dockerls = {},
+        lemminx = {},
+        rust_analyzer = {
+          filetypes = {"rust"},
+          root_dir = util.root_pattern("Cargo.toml"),
+          settings = {
+            ['cargo-analyzer'] = {
+              cargo = {
+                allFeatures = true,
+              }
+            }
+          }
+        },
+				-- twig_cs = {}
 			}
 
 			-- Default handlers for LSP
@@ -201,7 +220,7 @@ return {
 					on_attach = on_attach,
 					settings = config.settings,
 					root_dir = config.root_dir,
-          cmd = config.cmd,
+					cmd = config.cmd,
 				})
 			end
 
