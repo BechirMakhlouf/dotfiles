@@ -5,7 +5,10 @@
 }
 
 window#waybar {
-    background-color: #1E2127;
+
+    /* background-color: #1E2127; */
+    background-color: #000000;
+    opacity: 0.7;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
@@ -16,10 +19,11 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
+
 window#waybar.empty {
     background-color: transparent;
 }
+/*
 window#waybar.solo {
     background-color: #FFFFFF;
 }

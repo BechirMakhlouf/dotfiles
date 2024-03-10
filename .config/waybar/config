@@ -8,7 +8,7 @@
     // "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "sway/window"],
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media", "hyprland/window"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "memory", "backlight", "keyboard-state", "sway/language", "battery", "clock", "tray"],
+    "modules-right": ["pulseaudio", "network", "memory", "backlight", "keyboard-state", "hyprland/language", "battery", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
