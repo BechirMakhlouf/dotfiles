@@ -1,5 +1,3 @@
--- local util = require "lspconfig.util"
-
 return {
 	{
 		"neovim/nvim-lspconfig",
@@ -162,18 +160,8 @@ return {
 				taplo = {},
 				dockerls = {},
         lemminx = {},
-        -- rust_analyzer = {
-        --   filetypes = {"rust"},
-        --   root_dir = util.root_pattern("Cargo.toml"),
-        --   settings = {
-        --     ['cargo-analyzer'] = {
-        --       cargo = {
-        --         allFeatures = true,
-        --       }
-        --     }
-        --   }
-        -- },
-				-- twig_cs = {}
+        rust_analyzer = {},
+        twiggy_language_server = {},
 			}
 
 			-- Default handlers for LSP
@@ -242,18 +230,18 @@ return {
 					-- formatting.clang_format,
 
 					-- diagnostics for js/ts
-					diagnostics.eslint.with({
-						condition = function(utils)
-							return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
-						end,
-					}),
-
-					-- code actions for js/ts
-					code_actions.eslint.with({
-						condition = function(utils)
-							return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
-						end,
-					}),
+					-- diagnostics.eslint.with({
+					-- 	condition = function(utils)
+					-- 		return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
+					-- 	end,
+					-- }),
+					--
+					-- -- code actions for js/ts
+					-- code_actions.eslint.with({
+					-- 	condition = function(utils)
+					-- 		return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs", ".eslintrc.json" })
+					-- 	end,
+					-- }),
 				},
 			})
 
