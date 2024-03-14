@@ -30,8 +30,9 @@ return {
 						".sl",
 						"_build",
 						".next",
+            ".obsidian",
 					},
-					hidden = true,
+					hidden = false,
 				},
 			})
 

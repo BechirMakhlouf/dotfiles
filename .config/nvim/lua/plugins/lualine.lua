@@ -39,7 +39,7 @@ return {
 
 			require("lualine").setup({
 				optons = {
-					theme = "catppuccin",
+					-- theme = "catppuccin",
 					globalstatus = true,
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "█", right = "█" },

@@ -48,7 +48,7 @@ return {
 					"taplo",
 					"dockerls",
 					"lemminx",
-          "rust_analyzer"
+					"rust_analyzer",
 				},
 			})
 
@@ -159,9 +159,10 @@ return {
 				phpactor = {},
 				taplo = {},
 				dockerls = {},
-        lemminx = {},
-        rust_analyzer = {},
-        twiggy_language_server = {},
+				lemminx = {},
+				rust_analyzer = {},
+				twiggy_language_server = {},
+				-- java_language_server = {},
 			}
 
 			-- Default handlers for LSP

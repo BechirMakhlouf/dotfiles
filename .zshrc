@@ -99,3 +99,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 export ENHANCD_FILTER="fzf --height 40%:fzy"
 eval "$(zoxide init zsh)"
+
+export PATH=$PATH:/opt/glassfish6/bin

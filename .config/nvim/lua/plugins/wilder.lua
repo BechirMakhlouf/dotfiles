@@ -13,12 +13,12 @@ return {
 		config = function()
 			local wilder = require("wilder")
 			local macchiato = require("catppuccin.palettes").get_palette("macchiato")
-
+      local tokyonight = require("tokyonight.colors")
 			-- Create a highlight group for the popup menu
 			local text_highlight =
-				wilder.make_hl("WilderText", { { a = 1 }, { a = 1 }, { foreground = macchiato.text } })
+				wilder.make_hl("WilderText", { { a = 1 }, { a = 1 }, { foreground = tokyonight.default.fg } })
 			local mauve_highlight =
-				wilder.make_hl("WilderMauve", { { a = 1 }, { a = 1 }, { foreground = macchiato.mauve } })
+				wilder.make_hl("WilderMauve", { { a = 1 }, { a = 1 }, { foreground = tokyonight.default.blue } })
 
 			-- Enable wilder when pressing :, / or ?
 			wilder.setup({ modes = { ":", "/", "?" } })
