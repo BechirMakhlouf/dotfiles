@@ -13,6 +13,8 @@ local TERM = os.getenv("TERM")
 
 -- Normal --
 
+nnoremap("<Esc>", [[<Cmd>noh<CR>]])
+
 -- Disable Space bar since it'll be used as the leader key
 nnoremap("<space>", "<nop>")
 

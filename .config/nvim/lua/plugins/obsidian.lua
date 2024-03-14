@@ -11,11 +11,12 @@ return {
 		--   "BufReadPre path/to/my-vault/**.md",
 		--   "BufNewFile path/to/my-vault/**.md",
 		-- },
+
 		dependencies = {
 			-- Required.
 			"nvim-lua/plenary.nvim",
 
-      -- Optional.
+			-- Optional.
 			"hrsh7th/nvim-cmp",
 		},
 		opts = {
@@ -50,16 +51,6 @@ return {
 					opts = { buffer = true },
 				},
 			},
-			daily_notes = {
-				-- Optional, if you keep daily notes in a separate directory.
-				folder = "Daily Notes/",
-				-- Optional, if you want to change the date format for the ID of daily notes.
-				date_format = "%d-%m-%y",
-				-- Optional, if you want to change the date format of the default alias of daily notes.
-				-- alias_format = "%B %-d, %Y",
-				-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-				template = "Templates/Daily Notes Template",
-			},
 
 			follow_url_func = function(url)
 				-- Open the URL in the default web browser.
@@ -86,6 +77,21 @@ return {
 			end,
 		},
 
+    templates = {
+      subdir = "Templates",
+      date_format = "%d-%m-%y",
+      time_format = "%H:%M",
+    },
+		daily_notes = {
+			-- Optional, if you keep daily notes in a separate directory.
+			folder = "notes/test",
+			-- Optional, if you want to change the date format for the ID of daily notes.
+			date_format = "%d-%m-%y",
+			-- Optional, if you want to change the date format of the default alias of daily notes.
+			-- alias_format = "%B %-d, %Y",
+			-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
+			template = "Daily Notes Template",
+		},
 		attachments = {
 
 			-- The default folder to place images in via `:ObsidianPasteImg`.

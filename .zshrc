@@ -77,6 +77,9 @@ alias lvim="/home/copernicus/.local/bin/lvim"
 
 # todoist
 alias todo="todoist-cli"
+
+# cliphist clipboard history
+alias clipboard="cliphist list | fzf | cliphist decode | wl-copy"
 # ATUIN
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
@@ -101,3 +104,4 @@ export ENHANCD_FILTER="fzf --height 40%:fzy"
 eval "$(zoxide init zsh)"
 
 export PATH=$PATH:/opt/glassfish6/bin
+
