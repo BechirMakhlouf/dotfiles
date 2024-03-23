@@ -70,6 +70,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" }, -- lsp
 					{ name = "buffer", max_item_count = 5 }, -- text within current buffer
+					{ name = "codeium" },
 					{ name = "copilot" }, -- Copilot suggestions
 					{ name = "path", max_item_count = 3 }, -- file system paths
 					{ name = "luasnip", max_item_count = 3 }, -- snippets
@@ -77,13 +78,19 @@ return {
 				-- Enable pictogram icons for lsp/autocompletion
 				formatting = {
 					expandable_indicator = true,
-					format = lspkind.cmp_format({
+					-- format = lspkind.cmp_format({
+					-- 	mode = "symbol_text",
+					-- 	maxwidth = 50,
+					-- 	ellipsis_char = "...",
+					-- 	symbol_map = {
+					-- 		Copilot = "",
+					-- 	},
+					-- }),
+					format = require("lspkind").cmp_format({
 						mode = "symbol_text",
 						maxwidth = 50,
 						ellipsis_char = "...",
-						symbol_map = {
-							Copilot = "",
-						},
+						symbol_map = { Codeium = "" },
 					}),
 				},
 				experimental = {

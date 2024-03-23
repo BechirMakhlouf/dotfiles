@@ -49,6 +49,7 @@ return {
 					"dockerls",
 					"lemminx",
 					"rust_analyzer",
+					"jdtls",
 				},
 			})
 
@@ -84,9 +85,9 @@ return {
 
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
-				jdtls = {
-					cmd = { "/usr/bin/jdtls" },
-				},
+				-- jdtls = {
+				-- 	cmd = { "/usr/bin/jdtls" },
+				-- },
 				bashls = {},
 				clangd = {
 					cmd = {
