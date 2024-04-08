@@ -85,9 +85,10 @@ return {
 
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
-				-- jdtls = {
-				-- 	cmd = { "/usr/bin/jdtls" },
-				-- },
+        csharp_ls = {},
+				jdtls = {
+					cmd = { "/home/copernicus/.local/share/nvim/mason/bin/jdtls" },
+				},
 				bashls = {},
 				clangd = {
 					cmd = {
@@ -161,7 +162,13 @@ return {
 				taplo = {},
 				dockerls = {},
 				lemminx = {},
-				rust_analyzer = {},
+				rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              cargo = { allFeatures = true },
+            }
+          }
+        },
 				twiggy_language_server = {},
 				-- java_language_server = {},
 			}

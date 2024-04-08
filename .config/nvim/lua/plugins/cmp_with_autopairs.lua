@@ -14,6 +14,7 @@ return {
 			"onsails/lspkind.nvim",
 			"windwp/nvim-ts-autotag",
 			"windwp/nvim-autopairs",
+			"zbirenbaum/copilot-cmp",
 		},
 		config = function()
 			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
@@ -22,7 +23,7 @@ return {
 			local lspkind = require("lspkind")
 
 			require("nvim-autopairs").setup()
-
+			require("copilot_cmp").setup()
 			-- Integrate nvim-autopairs with cmp
 			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
@@ -86,11 +87,17 @@ return {
 					-- 		Copilot = "",
 					-- 	},
 					-- }),
-					format = require("lspkind").cmp_format({
-						mode = "symbol_text",
-						maxwidth = 50,
-						ellipsis_char = "...",
-						symbol_map = { Codeium = "" },
+
+					-- format = require("lspkind").cmp_format({
+					-- 	mode = "symbol_text",
+					-- 	maxwidth = 50,
+					-- 	ellipsis_char = "...",
+					-- 	symbol_map = { Codeium = "" },
+					-- }),
+					format = lspkind.cmp_format({
+						mode = "symbol",
+						max_width = 50,
+						symbol_map = { Copilot = "" },
 					}),
 				},
 				experimental = {

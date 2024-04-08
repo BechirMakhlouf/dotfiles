@@ -47,6 +47,12 @@ nnoremap("#", "#zz")
 
 -- Diagnostics
 
+-- under 
+nnoremap("]d", function()
+	vim.diagnostic.get_namespaces()
+	vim.api.nvim_feedkeys("zz", "n", false)
+end)
+
 -- Goto next diagnostic of any severity
 nnoremap("]d", function()
 	vim.diagnostic.goto_next({})
