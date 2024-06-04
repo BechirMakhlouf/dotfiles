@@ -57,6 +57,9 @@ vim.opt.clipboard = "unnamed,unnamedplus"
 -- Enable cursor line highlight
 vim.opt.cursorline = true
 
+-- substitution better defaults
+vim.opt.inccommand = "split"
+
 -- Set fold settings
 -- These options were reccommended by nvim-ufo
 -- See: https://github.com/kevinhwang91/nvim-ufo#minimal-configuration

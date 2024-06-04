@@ -22,6 +22,8 @@ return {
 			local luasnip = require("luasnip")
 			local lspkind = require("lspkind")
 
+
+      require("cmp_nvim_lsp").setup()
 			require("nvim-autopairs").setup()
 			require("copilot_cmp").setup()
 			-- Integrate nvim-autopairs with cmp
@@ -29,7 +31,6 @@ return {
 
 			-- Load snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
-
 			cmp.setup({
 				snippet = {
 					expand = function(args)
@@ -71,8 +72,10 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" }, -- lsp
 					{ name = "buffer", max_item_count = 5 }, -- text within current buffer
-					{ name = "codeium" },
-					{ name = "copilot" }, -- Copilot suggestions
+					-- { name = "codeium" },
+          { name = "vim-dadbod-completion" },
+          { name = "nvim_lua" }, -- neovim lua api
+					-- { name = "copilot" }, -- Copilot suggestions
 					{ name = "path", max_item_count = 3 }, -- file system paths
 					{ name = "luasnip", max_item_count = 3 }, -- snippets
 				}),
@@ -83,9 +86,9 @@ return {
 					-- 	mode = "symbol_text",
 					-- 	maxwidth = 50,
 					-- 	ellipsis_char = "...",
-					-- 	symbol_map = {
-					-- 		Copilot = "",
-					-- 	},
+						-- symbol_map = {
+						-- 	Copilot = "",
+						-- },
 					-- }),
 
 					-- format = require("lspkind").cmp_format({

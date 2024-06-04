@@ -22,6 +22,7 @@ return {
 							["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 							["<C-x>"] = actions.delete_buffer,
 						},
+
 					},
 					file_ignore_patterns = {
 						"node_modules",
@@ -32,7 +33,7 @@ return {
 						".next",
             ".obsidian",
 					},
-					hidden = false,
+					hidden = true,
 				},
 			})
 

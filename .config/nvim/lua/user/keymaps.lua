@@ -233,6 +233,11 @@ nnoremap("<leader>gc", function()
 	end
 end, { desc = "Search [G]it [C]ommits" })
 --
+
+-- DADBOD KEYMAPS
+
+nnoremap("<leader>db", ":DBUIToggle<cr>")
+
 -- LSP Keybinds (exports a function to be used in ../../after/plugin/lsp.lua b/c we need a reference to the current buffer) --
 local M = {}
 
