@@ -65,6 +65,7 @@ alias next-pnpm="/usr/bin/pnpx create-next-app@latest . --eslint --app --typescr
 alias next-bun="/usr/bin/bun x create-next-app@latest . --eslint --app --typescript --tailwind --no-src-dir --import-alias @"
 
 eval "$(sheldon source)"
+
 eval $(thefuck --alias)
 
 
@@ -106,3 +107,5 @@ eval "$(zoxide init zsh)"
 # export PATH=$PATH:/opt/glassfish6/bin
 export PATH=$PATH:/home/copernicus/.cargo/bin
 
+# oh my posh
+# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/tokyonight_storm.json)"

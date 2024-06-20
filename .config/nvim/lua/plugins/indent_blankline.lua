@@ -2,16 +2,22 @@ return {
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		event = "BufEnter",
+		opts = {
+			indent = {
+				char = "│",
+				tab_char = "│",
+			},
+			scope = { enabled = false },
+			exclude = {
+				filetypes = {
+					"help",
+					"lazy",
+					"mason",
+					"notify",
+					"oil",
+				},
+			},
+		},
 		main = "ibl",
-		opts = {},
-		config = function()
-			-- require("ibl").setup({
-			-- 	scope = {
-			-- 		enabled = false,
-			-- 		show_start = false,
-			-- 		show_end = false,
-			-- 	},
-			-- })
-		end,
 	},
 }

@@ -19,6 +19,13 @@ github = "hlissner/zsh-autopair"
 #
 [plugins.enhancd]
 github = "babarot/enhancd"
+#
+[plugins.base16]
+github = 'chriskempson/base16-shell'
+#
+[plugins.docker]
+github = "greymd/docker-zsh-completion"
+#
 # github = "b4b4r07/enhancd"
 
 #
@@ -31,8 +38,6 @@ github = "babarot/enhancd"
 # [plugins.git]
 # github = "davidde/git"
 #
-# [plugins.base16]
-# github = 'chriskempson/base16-shell'
 #
 # [plugins.zsh-vi-mode]
 # github = 'jeffreytse/zsh-vi-mode'
