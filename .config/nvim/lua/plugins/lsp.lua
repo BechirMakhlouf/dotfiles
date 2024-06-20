@@ -49,7 +49,7 @@ return {
 					"dockerls",
 					"lemminx",
 					"rust_analyzer",
-					"jdtls",
+					"jdtls", -- java
 				},
 			})
 
@@ -85,6 +85,7 @@ return {
 
 			-- LSP servers to install (see list here: https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers )
 			local servers = {
+
 				csharp_ls = {},
 				jdtls = {
 					cmd = { "/home/copernicus/.local/share/nvim/mason/bin/jdtls" },
@@ -97,7 +98,7 @@ return {
 					},
 				},
 				cssls = {},
-				-- gleam = {},
+				gleam = {},
 				-- graphql = {},
 				html = {},
 				jsonls = {},
@@ -198,13 +199,15 @@ return {
 					})
 				end, { desc = "LSP: Format current buffer with LSP" })
 
+				vim.lsp.inlay_hint.enable(true, { bufnr = buffer_number })
+
 				-- if client.server_capabilities.codeLensProvider then
-				-- 	vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave", "CursorHold" }, {
-				-- 		buffer = buffer_number,
-				-- 		callback = vim.lsp.codelens.refresh,
-				-- 		desc = "LSP: Refresh code lens",
-				-- 		group = vim.api.nvim_create_augroup("codelens", { clear = true }),
-				-- 	})
+					vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave", "CursorHold" }, {
+						buffer = buffer_number,
+						callback = vim.lsp.codelens.refresh,
+						desc = "LSP: Refresh code lens",
+						group = vim.api.nvim_create_augroup("codelens", { clear = true }),
+					})
 				-- end
 			end
 
@@ -237,7 +240,9 @@ return {
 					formatting.goimports_reviser,
 					formatting.golines,
 					formatting.phpcsfixer,
-          --formatting.twigcsfixer,
+					formatting.black,
+					formatting.goimports,
+					--formatting.twigcsfixer,
 					-- formatting.clang_format,
 
 					-- diagnostics for js/ts
