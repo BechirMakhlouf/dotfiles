@@ -137,7 +137,7 @@ return {
 			local lspkind = require("lspkind")
 
 			require("nvim-autopairs").setup()
-      require("cmp_nvim_lsp").setup()
+			require("cmp_nvim_lsp").setup()
 
 			-- Integrate nvim-autopairs with cmp
 			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
@@ -189,6 +189,7 @@ return {
 					{ name = "buffer", max_item_count = 5 }, -- text within current buffer
 					{ name = "path", max_item_count = 3 }, -- file system paths
 					{ name = "luasnip", max_item_count = 3 }, -- snippets
+					-- { name = "vim-dadbod-completion" },
 				}),
 				-- Enable pictogram icons for lsp/autocompletion
 				formatting = {
@@ -205,6 +206,9 @@ return {
 				experimental = {
 					ghost_text = true,
 				},
+			})
+			cmp.setup.filetype({ "sql" }, {
+				sources = { { name = "vim-dadbod-completion" }, { name = "buffer" } },
 			})
 		end,
 	},

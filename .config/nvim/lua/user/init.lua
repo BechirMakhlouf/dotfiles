@@ -1,3 +1,5 @@
 require("user.options")
 require("user.lazy")
 require("user.keymaps")
+require("user.hightlight_yank")
+require("user.toggle_diagnostics")

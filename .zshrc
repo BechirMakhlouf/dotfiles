@@ -35,8 +35,8 @@ alias v="nvim"
 
 FILES_TO_IGNORE_GLOB="node_modules|.git|.next|.github"
 alias ls="exa -ahF --icons --group-directories-first"
-alias ll="exa -lahF --icons --group-directories-first"
-alias lt="exa -ahF --icons --group-directories-first --tree --level 2 --ignore-glob='$FILES_TO_IGNORE_GLOB'"
+alias ll="exa -lahF --icons --no-permissions --no-time --no-filesize --no-user --group-directories-first"
+alias lt="exa -ahF --icons --no-permissions --no-time --no-filesize  --no-user --group-directories-first --tree --level 2 --ignore-glob='$FILES_TO_IGNORE_GLOB'"
 
 # alias cd="z"
 alias f="yazi"
@@ -94,8 +94,8 @@ bindkey '^r' _atuin_search_widget
 bindkey '^[[A' _atuin_search_widget
 bindkey '^[OA' _atuin_search_widget
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -109,3 +109,6 @@ export PATH=$PATH:/home/copernicus/.cargo/bin
 
 # oh my posh
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/tokyonight_storm.json)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

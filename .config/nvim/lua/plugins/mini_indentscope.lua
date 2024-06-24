@@ -4,14 +4,13 @@ return {
 		version = false,
 		event = "BufEnter",
 		opts = {
-			-- symbol = "│",  
-      symbol = '╎',
+			-- symbol = "│",
+			symbol = "╎",
 			options = { try_as_border = true },
 		},
 		init = function()
-
-      local tokyonight = require("tokyonight.colors")
-			-- local macchiato = require("catppuccin.palettes").get_palette("tokyonight")
+			local tokyonight = require("tokyonight.colors")
+			-- local macchiato = require("catppuccin.palettes")
 			vim.api.nvim_create_autocmd("FileType", {
 				pattern = {
 					"help",

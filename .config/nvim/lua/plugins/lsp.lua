@@ -330,9 +330,9 @@ return {
 			local on_attach = function(client, buffer_number)
 				-- Pass the current buffer to map lsp keybinds
 				map_lsp_keybinds(buffer_number)
-				if client.name == "rust_analyzer" then
-					vim.lsp.inlay_hint.enable(true, { bufnr = buffer_number })
-				end
+				-- if client.name == "rust_analyzer" then
+				-- 	vim.lsp.inlay_hint.enable(true, { bufnr = buffer_number })
+				-- end
 			end
 
 			-- LSP servers and clients are able to communicate to each other what features they support.
@@ -351,6 +351,7 @@ return {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- LSP Servers
+				clangd = {},
 				bashls = {},
 				biome = {},
 				cssls = {},
@@ -428,25 +429,28 @@ return {
 				},
 				yamlls = {},
 				svelte = {},
-        gopls = {
+				gopls = {
 					settings = {
 						gopls = {
 							completeUnimported = true,
 							usePlaceholders = true,
+							hints = {
+								assignVariableTypes = true,
+								parameterNames = true,
+								rangeVariableTypes = true,
+							},
 							analyses = {
 								unusedparams = true,
 							},
 						},
 					},
-        },
-				rust_analyzer = {
-					settings = {
-						inlayHints = true,
-					},
-					check = {
-						command = "clippy",
-					},
 				},
+				rust_analyzer = {
+					-- check = {
+					-- 	command = "clippy",
+					-- },
+				},
+				csharp_ls = {},
 			}
 
 			local formatters = {
