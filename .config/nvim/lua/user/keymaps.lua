@@ -93,7 +93,7 @@ nnoremap("[w", function()
 end)
 
 -- Open the diagnostic under the cursor in a float window
-nnoremap("<leader>D", function()
+nnoremap("<leader>dd", function()
 	vim.diagnostic.open_float({
 		border = "rounded",
 	})
