@@ -9,7 +9,7 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 export QT_QPA_PLATFORM=wayland
 export _JAVA_AWT_WM_NONREPARENTING=1 # make some java applications run
 
-export FZF_DEFAULT_COMMAND='fd --hidden --exclude "node_modules|.git|.next|.github|.cache|.local|.mozilla"'
+export FZF_DEFAULT_COMMAND='fd --hidden --exclude "node_modules|.git|.next|.github|.cache|.local|.mozilla|cache|.bun"'
 
 # source ~/.zplug/init.zsh
 #
@@ -33,10 +33,11 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 
-FILES_TO_IGNORE_GLOB="node_modules|.git|.next|.github"
+FILES_TO_IGNORE_GLOB="node_modules|.git|.next|.github|target"
 alias ls="exa -ahF --icons --group-directories-first"
 alias ll="exa -lahF --icons --no-permissions --no-time --no-filesize --no-user --group-directories-first"
 alias lt="exa -ahF --icons --no-permissions --no-time --no-filesize  --no-user --group-directories-first --tree --level 2 --ignore-glob='$FILES_TO_IGNORE_GLOB'"
+alias ltt="exa -ahF --icons --no-permissions --no-time --no-filesize  --no-user --group-directories-first --tree --ignore-glob='$FILES_TO_IGNORE_GLOB'"
 
 # alias cd="z"
 alias f="yazi"

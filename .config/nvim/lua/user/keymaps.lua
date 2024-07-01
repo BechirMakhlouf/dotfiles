@@ -14,7 +14,7 @@ local TERM = os.getenv("TERM")
 -- Normal --
 
 nnoremap("<Esc>", [[<Cmd>noh<CR>]])
-
+nnoremap("x", '"_x')
 -- Disable Space bar since it'll be used as the leader key
 nnoremap("<space>", "<nop>")
 
@@ -340,6 +340,9 @@ end, { desc = "[I]nlay [H]ints" })
 -- Insert --
 -- Map jk to <esc>
 inoremap("jk", "<esc>")
+inoremap("JK", "<esc>")
+inoremap("<C-h>", "<Left>")
+inoremap("<C-l>", "<Right>")
 
 -- Visual --
 -- Disable Space bar since it'll be used as the leader key

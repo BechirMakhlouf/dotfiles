@@ -177,6 +177,8 @@ return {
 				hyprls = {
 					filetypes = { "hyprlang" },
 				},
+				terraformls = {},
+				dockerls = {},
 			}
 
 			local formatters = {
@@ -210,6 +212,7 @@ return {
 					handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {}),
 					on_attach = on_attach,
 					settings = config.settings,
+					check = config.check,
 					root_dir = config.root_dir,
 				})
 			end
@@ -251,6 +254,7 @@ return {
 				typescriptreact = { { "prettierd", "prettier", "biome" } },
 				svelte = { { "prettierd", "prettier " } },
 				lua = { "stylua" },
+				sh = { "beautysh" },
 			},
 		},
 	},
