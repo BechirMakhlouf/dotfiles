@@ -158,16 +158,16 @@ end, { desc = "[S]earch [S]pelling suggestions" })
 -- end, { desc = "[S]earch [T]elescope builtins" })
 
 -- Open Spectre for global find/replace
-nnoremap("<leader>S", function()
+nnoremap("<leader>gS", function()
 	require("spectre").toggle()
-end)
+end, { desc = "[G]lobal [S]earch" })
 
 -- Press 'S' for quick find/replace for the word under the cursor
-nnoremap("S", function()
+nnoremap("<leader>S", function()
 	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
 	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
 	vim.api.nvim_feedkeys(keys, "n", false)
-end)
+end, { desc = "Quick [S]ubstitution for the word under the cursor" })
 
 -- Open Spectre for global find/replace for the word under the cursor in normal mode
 -- TODO Fix, currently being overriden by Telescope
