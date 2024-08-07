@@ -24,8 +24,7 @@ return {
 					vim.b.miniindentscope_disable = true
 				end,
 			})
-
-			vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { fg = tokyonight.default.cyan })
+			-- vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { fg = tokyonight.default.cyan })
 		end,
 	},
 }

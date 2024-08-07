@@ -73,7 +73,11 @@ return {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- LSP Servers
+				astro = {},
+				vhdl_ls = {},
+				asm_lsp = {},
 				clangd = {},
+				dartls = {},
 				bashls = {},
 				biome = {},
 				cssls = {},
@@ -112,7 +116,7 @@ return {
 				},
 				nil_ls = {},
 				pyright = {},
-				sqlls = {},
+				sqls = {},
 				tailwindcss = {},
 				tsserver = {
 					settings = {
@@ -179,14 +183,22 @@ return {
 				},
 				terraformls = {},
 				dockerls = {},
+				docker_compose_language_service = {},
+				nginx_language_server = {},
+				-- bufls = {},
+				pbls = {},
+				hls = {},
 			}
 
 			local formatters = {
 				prettierd = {},
 				stylua = {},
+				buf = {},
 			}
 
-			local manually_installed_servers = { "ocamllsp", "gleam", "rust_analyzer" }
+			local manually_installed_servers = {
+				--[[ ,  "ocamllsp" , "gleam", "rust_analyzer" ]]
+			}
 
 			local mason_tools_to_install = vim.tbl_keys(vim.tbl_deep_extend("force", {}, servers, formatters))
 
@@ -254,7 +266,9 @@ return {
 				typescriptreact = { { "prettierd", "prettier", "biome" } },
 				svelte = { { "prettierd", "prettier " } },
 				lua = { "stylua" },
-				sh = { "beautysh" },
+				-- sh = { "beautysh" },
+				proto = { "buf" },
+				sql = { "sql_formatter" },
 			},
 		},
 	},

@@ -10,8 +10,8 @@ return {
 		config = function()
 			-- local theme = require("catppuccin.palettes").get_palette("macchiato")
 			local theme = require("tokyonight.colors")
-			vim.api.nvim_set_hl(0, "SpectreSearch", { bg = theme.default.red, fg = theme.default.fg })
-			vim.api.nvim_set_hl(0, "SpectreReplace", { bg = theme.default.green, fg = theme.default.fg })
+			-- vim.api.nvim_set_hl(0, "SpectreSearch", { bg = theme.default.red, fg = theme.default.fg })
+			-- vim.api.nvim_set_hl(0, "SpectreReplace", { bg = theme.default.green, fg = theme.default.fg })
 
 			require("spectre").setup({
 				highlight = {

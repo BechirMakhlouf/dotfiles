@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
+		-- branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			{
@@ -22,21 +22,20 @@ return {
 							["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 							["<C-x>"] = actions.delete_buffer,
 						},
-
 					},
 					file_ignore_patterns = {
 						"node_modules",
 						"yarn.lock",
-						".git",
+						"^.git/",
 						".sl",
 						"_build",
 						".next",
-            ".obsidian",
+						".obsidian",
+						".yarn",
 					},
-					hidden = true,
+					hidden = false,
 				},
 			})
-
 			-- Enable telescope fzf native, if installed
 			pcall(require("telescope").load_extension, "fzf")
 		end,

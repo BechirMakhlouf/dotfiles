@@ -48,6 +48,12 @@ nnoremap("#", "#zz")
 -- Swap between last two buffers
 nnoremap("<leader>'", "<C-^>", { desc = "Switch to last buffer" })
 
+-- Map MaximizerToggle (szw/vim-maximizer) to leader-m
+nnoremap("<leader>m", ":MaximizerToggle<cr>", { desc = "[M]aximize Window" })
+
+-- Resize split windows to be equal size
+nnoremap("<leader>=", "<C-w>=")
+
 -- Diagnostics
 
 -- under
@@ -163,7 +169,7 @@ nnoremap("<leader>gS", function()
 end, { desc = "[G]lobal [S]earch" })
 
 -- Press 'S' for quick find/replace for the word under the cursor
-nnoremap("<leader>S", function()
+nnoremap("<leader>su", function()
 	local cmd = ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>"
 	local keys = vim.api.nvim_replace_termcodes(cmd, true, false, true)
 	vim.api.nvim_feedkeys(keys, "n", false)
